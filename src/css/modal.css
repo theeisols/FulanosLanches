@@ -1,0 +1,402 @@
+.topo-modal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fechar-modal{
+    cursor: pointer;
+    align-self: flex-start;
+    color: #000000;
+    font-size: 20px;
+    transition: 0.1s;
+}
+
+.fechar-modal:hover{
+    cursor: pointer;
+    align-self: flex-start;
+    color: #cc0000;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/*
+configurações do modal 
+*/
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    z-index: 99;
+}
+
+.conteudo-modal{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 40%;
+    border-radius: 15px;
+    position: relative;
+}
+
+/*
+configurações das abas
+*/
+#aba-lanches{
+    display: none;
+}
+
+#aba-entrega{
+    display: block;
+}
+
+#botoes-alternar-abas button.ativado{
+    background-color: #ebebeb;
+}
+
+#botoes-alternar-abas button.ativado:hover{
+    background-color: #ebebeb;
+}
+
+#botoes-alternar-abas button{
+    background-color: #dbdbdb;
+    color: #000000;
+    padding: 0.3rem 0.8rem;
+    margin-top: 5px;
+    border-radius: 0.5rem 0.5rem 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    align-self: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#botoes-alternar-abas button:hover{
+    background-color: #c1c1c1;
+    color: #cc0000;
+    transition: 0.2s;
+}
+
+/*
+configurações dos lanches
+*/
+.espaco-conteudo{
+    background-color: #ebebeb;
+    height: 200px;
+    border-radius: 0 15px 15px 15px;
+    margin-bottom: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.lanche{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    margin: 15px 15px;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.titulo-botoes-lanche{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.titulo-lanche{
+    line-height: 3vw;
+}
+
+.lanche img{
+    background-color: #000000;
+    border-radius: 15px 0 0 15px;
+}
+
+.adicionar-remover-lanche{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adicionar-lanche{
+    background-color: #ffffff;
+    color: #cc0000;
+    border: 2px solid #cc0000;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 2px 10px;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.adicionar-lanche:hover{
+    background-color: #cc0000;
+    color: #ffffff;
+    border: 2px solid #cc0000;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 2px 10px;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.remover-lanche{
+    background-color: #ffffff;
+    color: #cc0000;
+    border: 2px solid #cc0000;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 2px 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.remover-lanche:hover{
+    background-color: #cc0000;
+    color: #ffffff;
+    border: 2px solid #cc0000;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 2px 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.qnt-lanche{
+    background-color: #cc0000;
+    color: #ffffff;
+    padding: 2px 10px;
+    border: 2px solid #cc0000;
+    font-size: 20px;
+}
+
+/*
+configurações da entrega
+*/
+
+#retirar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#retirar input{
+    display: none;
+}
+
+#retirar button{
+    color: #a6a6a6;
+    font-size: 25px;
+    margin-left: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#retirar button:hover{
+    color: #bcbcbc;
+    transition: 0.2s;
+}
+
+#telefone-cep{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+#campo-telefone, #campo-cep{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#bairro-numero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+#campo-bairro, #campo-numero{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#form-cadastro{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ebebeb;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+#form-cadastro input[type=text], input[type=number]{
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    border: 2px solid #a6a6a6;
+    font-size: 1rem;
+    align-self: flex-start;
+    transition: 0.3s;
+}
+
+#cadastro input[type=submit]{
+    width: 100%;
+    background-color: #ffffff;
+    color: #cc0000;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 2px solid #cc0000;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    align-self: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#cadastro input[type=submit]:hover{
+    width: 100%;
+    background-color: #cc0000;
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 2px solid #cc0000;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    align-self: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-com-status{
+    display: flex;
+    align-items: center;
+}
+
+.input-com-status i{
+    color: #23b100;
+    display: none;
+    margin-left: 10px;
+}
+
+/*
+configurações do total
+*/
+#total-compra{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #ebebeb;
+    border-radius: 15px;
+    width: 100%;
+    height: 50px;
+}
+
+#valor-compra{
+    margin: 0px 15px;
+    font-size: larger;
+}
+
+/*
+configurações dos botões de cancelar e finalizar
+*/
+#botoes-carrinho{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#botoes-carrinho button, #botoes-carrinho input{
+    width: 6rem;
+    background-color: #ffffff;
+    color: #cc0000;
+    margin-top: 15px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 2px solid #cc0000;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botoes-carrinho button:hover, #botoes-carrinho input:hover{
+    background-color: #cc0000;
+    color: #ffffff;
+}
+
+#botoes-carrinho button:active, #botoes-carrinho input:active{
+    background-color: #6a0000;
+}
+
+@media only screen and (max-width: 1300px){
+    .conteudo-modal{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1020px){
+    .conteudo-modal{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 865px){
+    .conteudo-modal{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 645px){
+    .titulo-lanche{
+        margin: 0 10px;
+        font-size: 20px;
+        line-height: 5vw;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .lanche{
+        padding: 15px 15px;
+    }
+    .lanche img{
+        display: none;
+    }
+
+    .titulo-lanche{
+        font-size: 18px;
+        line-height: 5vw;
+    }
+
+    #adicionar-lanche{
+        margin: 0;
+    }
+}
