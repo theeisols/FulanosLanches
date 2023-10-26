@@ -83,25 +83,25 @@ const combos = [
 {
     nome: "Combom",
     descricao:"Três hambúgueres acompanhados de calabresa, nuggets e batata frita.",
-    preco: 25,
+    preco: 40,
     foto: "./img/lanches/combos/combom.png"
 },
 {
     nome: "Combomdimai",
     descricao:"Quatro hambúgueres acompanhados de calabresa, nuggets e batata frita.",
-    preco: 30,
+    preco: 45,
     foto: "./img/lanches/combos/combomdimai.png"
 },
 {
     nome: "Combopotência",
     descricao:"Cinco hambúgueres acompanhados de nuggets, batata frita e anéis de cebola.",
-    preco: 35,
+    preco: 50,
     foto: "./img/lanches/combos/combopotencia.png"
 },
 {
     nome: "Umoidicoisa",
     descricao:"Três hamburgueres, dois molhos e porções grandes de batata frita, anéis de cebola e nuggets.",
-    preco: 40,
+    preco: 55,
     foto: "./img/lanches/combos/umoidicoisa.png"
 }
 ]
