@@ -39,6 +39,13 @@ function Modal({estadoModal, altEstModal, clickEnviar, lanchesCarrinho, addLanch
       }
     }
 
+    //cancelar
+    function resetToggle(event){
+      setModoToggle("fa-solid fa-toggle-off")
+      setReadOnly(false)
+      setBackgroundColor("#ffffff")
+    }
+
     // atualizar preço
     let[preco, attPreco] = useState(0)
 
@@ -187,14 +194,14 @@ function Modal({estadoModal, altEstModal, clickEnviar, lanchesCarrinho, addLanch
                 <div id="botoes-carrinho">
                   <button
                   id="cancelar"
-                  onClick={(event) => {altEstModal(); alterarToggle(event)}}
+                  onClick={(event) => {altEstModal(); resetToggle(event)}}
                   >cancelar</button>
                   <input
                     type="submit"
                     name="finalizar"
                     defaultValue="finalizar"
                     style={{ marginLeft: 5 }}
-                    onClick={(event) => {clickEnviar(event); alterarToggle(event); attConts(); zerarPreco(); esvaziarCarrinho()}}
+                    onClick={(event) => {clickEnviar(event); resetToggle(event); attConts(); zerarPreco(); esvaziarCarrinho()}}
                   />
                 </div>
               </form>
